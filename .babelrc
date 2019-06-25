@@ -1,0 +1,21 @@
+{
+  "plugins": ["@babel/plugin-syntax-dynamic-import"],
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "modules": false,
+      }
+    ]
+  ],
+  "env": {
+    "karma": {
+      "plugins": [
+        [
+          "istanbul",
+          { "exclude": ["tests/*.test.js"] }
+        ]
+      ]
+    }
+  }
+}
