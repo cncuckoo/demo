@@ -1,6 +1,9 @@
 const merge = require('webpack-merge')
 const parts = require('./webpack.parts')
 const path = require('path')
+const dotenv = require('dotenv')
+// dotenv.config()
+
 
 const PATHS = {
   app: path.join(__dirname, 'src')
@@ -12,8 +15,8 @@ const commonConfig = merge([
   {
     output: {
       filename: "js/[name].[chunkhash:4].js",
-      // publicPath: '/'
-      publicPath: '/demo/'
+      publicPath: '/'
+      // publicPath: '/demo/'
     }
   }
 ])
